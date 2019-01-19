@@ -18,6 +18,20 @@ public class BeerServiceImpl implements BeerService {
 
   @Override
   public Beer save(Beer beer) {
-    return null;
+    return beerRepository.save(beer);
+  }
+
+  @Override
+  public Beer rateBeer(Long beerId, double value) {
+    // TODO oprional
+    Beer byId = beerRepository.findById(beerId).get();
+    byId.setRating(value);
+    return beerRepository.save(byId);
+  }
+
+  @Override
+  public Beer getBeerById(Long id) {
+    // TODO oprional
+    return beerRepository.findById(id).get();
   }
 }
