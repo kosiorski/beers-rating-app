@@ -10,3 +10,5 @@ Used stack:
 * Project Lombok
 * MySql
 * Punk API (https://punkapi.com/documentation/v2)
+
+Application in progress.
