@@ -1,6 +1,6 @@
 # beers-rating-app
 
-Simple full REST application using Punk Api. Downloads a list of beers, allowing you to vote for your favourite beer.
+Simple RESTful application using Punk Api. Downloads a list of beers, allowing you to vote for your favourite beer.
 
 Used stack:
 
