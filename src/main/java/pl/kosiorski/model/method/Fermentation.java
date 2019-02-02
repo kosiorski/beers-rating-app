@@ -15,8 +15,7 @@ public class Fermentation {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
+  @OneToOne
+  @JoinColumn(name = "temp_id")
   private Temp temp;
-
-  @OneToOne(mappedBy = "fermentation")
-  private Method method;
 }

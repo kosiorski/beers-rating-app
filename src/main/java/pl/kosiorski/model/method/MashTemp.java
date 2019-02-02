@@ -15,7 +15,10 @@ public class MashTemp {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
+  @OneToOne
+  @JoinColumn(name = "temp_id")
   private Temp temp;
+
   private Integer duration;
 
   @ManyToOne

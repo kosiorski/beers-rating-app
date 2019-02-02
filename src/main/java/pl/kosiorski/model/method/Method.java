@@ -24,8 +24,5 @@ public class Method {
   @JoinColumn(name = "fermentation_id")
   private Fermentation fermentation;
 
-  @OneToOne(mappedBy = "method")
-  private Beer beer;
-
   private boolean twist;
 }

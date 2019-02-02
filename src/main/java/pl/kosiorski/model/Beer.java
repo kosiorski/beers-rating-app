@@ -17,6 +17,7 @@ public class Beer {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "beer_id")
   private Long id;
 
   private String name;
@@ -38,29 +39,29 @@ public class Beer {
   private Double ph;
   private Double attenuationLevel;
 
-  @OneToOne
-  @JoinColumn(name = "volume_id")
-  private Volume volume;
+//  @OneToOne
+//  @JoinColumn(name = "volume_id")
+//  private Volume volume;
+//
+//  @OneToOne
+//  @JoinColumn(name = "boil_volume_id")
+//  private BoilVolume boilVolume;
 
-  @OneToOne
-  @JoinColumn(name = "boil_volume_id")
-  private BoilVolume boilVolume;
-
-  @OneToOne
-  @JoinColumn(name = "method_id")
-  private Method method;
+//  @OneToOne
+//  @JoinColumn(name = "method_id")
+//  private Method method;
 
   private String brewersTips;
   private String contributedBy;
   private String yeast;
 
-  @OneToMany(mappedBy = "beer")
-  private List<Ingredient> ingredients;
+//  @OneToMany(mappedBy = "beer")
+//  private List<Ingredient> ingredients;
 
-  @ElementCollection
-  @CollectionTable(name = "foodPairings", joinColumns = @JoinColumn(name = "beer_id"))
-  @Column(name = "foodPairing")
-  private List<String> foodPairing;
+//  @ElementCollection
+//  @CollectionTable(name = "foodPairings", joinColumns = @JoinColumn(name = "beer_id"))
+//  @Column(name = "foodPairing")
+//  private List<String> foodPairing;
 
   private double rating;
 
