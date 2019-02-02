@@ -1,12 +1,12 @@
-package pl.kosiorski.model;
+package pl.kosiorski.model.method;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class Volume {
+public class Temp {
 
-  private Integer value;
+  private double value;
   private String unit;
 }

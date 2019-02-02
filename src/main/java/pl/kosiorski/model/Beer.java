@@ -3,8 +3,11 @@ package pl.kosiorski.model;
 import lombok.Getter;
 import lombok.Setter;
 import pl.kosiorski.model.enums.Status;
+import pl.kosiorski.model.ingredient.Ingredient;
+import pl.kosiorski.model.method.Method;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Getter
@@ -35,13 +38,24 @@ public class Beer {
   private Double ph;
   private Double attenuationLevel;
   private Volume volume;
+
+  @OneToOne
+  @JoinColumn(name = "boil_volume_id")
   private BoilVolume boilVolume;
+
   private Method method;
   private String brewersTips;
   private String contributedBy;
   private String yeast;
 
+  @OneToMany(mappedBy = "beer")
+  private List<Ingredient> ingredients;
 
+
+  @ElementCollection
+  @CollectionTable(name="foodPairings", joinColumns=@JoinColumn(name="beer_id"))
+  @Column(name="foodPairing")
+  private List<String> foodPairing;
 
   private double rating;
 
