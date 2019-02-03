@@ -18,6 +18,6 @@ public class Volume {
   private Integer value;
   private String unit;
 
-//  @OneToOne(mappedBy = "volume")
-//  private Beer beer;
+  @OneToOne(mappedBy = "volume")
+  private Beer beer;
 }

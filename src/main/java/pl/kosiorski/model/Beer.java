@@ -39,9 +39,9 @@ public class Beer {
   private Double ph;
   private Double attenuationLevel;
 
-//  @OneToOne
-//  @JoinColumn(name = "volume_id")
-//  private Volume volume;
+  @OneToOne
+  @JoinColumn(name = "volume_id")
+  private Volume volume;
 //
 //  @OneToOne
 //  @JoinColumn(name = "boil_volume_id")
