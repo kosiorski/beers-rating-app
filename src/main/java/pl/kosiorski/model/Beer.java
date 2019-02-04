@@ -1,27 +1,56 @@
 package pl.kosiorski.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-import pl.kosiorski.model.enums.Flag;
 import pl.kosiorski.model.enums.Status;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Getter
 @Setter
+@AllArgsConstructor
 @Table(name = "beers")
 public class Beer {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "beer_id")
   private Long id;
 
   private String name;
 
+  private String tagline;
+
+  private String firstBrewed;
+
   @Column(length = 2000)
   private String description;
+
+  private String imageUrl;
+  private Double abv;
+  private Double ibu;
+  private Double targetFg;
+  private Double targetOg;
+  private Double ebc;
+  private Double srm;
+  private Double ph;
+  private Double attenuationLevel;
+
+  @Embedded private Volume volume;
+
+  //  @Embedded private BoilVolume boilVolume;
+
+  //  @Embedded private Method method;
+
+  private String brewersTips;
+  private String contributedBy;
+  private String yeast;
+
+  //  private List<Ingredient> ingredients;
+
+  //  private List<String> foodPairing;
 
   private double rating;
 
@@ -30,4 +59,7 @@ public class Beer {
   private int notDrinking;
 
   private Status status;
+
+  public Beer() {
+  }
 }

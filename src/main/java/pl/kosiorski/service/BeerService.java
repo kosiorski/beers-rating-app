@@ -2,6 +2,8 @@ package pl.kosiorski.service;
 
 import pl.kosiorski.model.Beer;
 
+import java.util.List;
+
 public interface BeerService {
 
   Beer save(Beer beer);
@@ -9,4 +11,8 @@ public interface BeerService {
   Beer rateBeer(Long beerId, double value);
 
   Beer getBeerById(Long id);
+
+  Iterable<Beer> save(List<Beer> beers);
+
+  Iterable<Beer> list();
 }

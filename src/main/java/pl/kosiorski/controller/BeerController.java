@@ -45,4 +45,9 @@ public class BeerController {
 
     return beers;
   }
+
+  @GetMapping("/list")
+  public Iterable<Beer> list() {
+    return beerService.list();
+  }
 }

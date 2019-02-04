@@ -6,6 +6,8 @@ import pl.kosiorski.model.Beer;
 import pl.kosiorski.repository.BeerRepository;
 import pl.kosiorski.service.BeerService;
 
+import java.util.List;
+
 @Service
 public class BeerServiceImpl implements BeerService {
 
@@ -33,5 +35,15 @@ public class BeerServiceImpl implements BeerService {
   public Beer getBeerById(Long id) {
     // TODO oprional
     return beerRepository.findById(id).get();
+  }
+
+  @Override
+  public Iterable<Beer> save(List<Beer> beers) {
+    return beerRepository.saveAll(beers);
+  }
+
+  @Override
+  public Iterable<Beer> list() {
+    return beerRepository.findAll();
   }
 }
