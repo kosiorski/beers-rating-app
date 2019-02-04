@@ -4,11 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import pl.kosiorski.model.enums.Status;
-import pl.kosiorski.model.ingredient.Ingredient;
-import pl.kosiorski.model.method.Method;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Getter
@@ -43,7 +40,7 @@ public class Beer {
 
   @Embedded private Volume volume;
 
-  @Embedded private BoilVolume boilVolume;
+  //  @Embedded private BoilVolume boilVolume;
 
   //  @Embedded private Method method;
 
@@ -62,4 +59,7 @@ public class Beer {
   private int notDrinking;
 
   private Status status;
+
+  public Beer() {
+  }
 }
