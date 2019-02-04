@@ -1,5 +1,6 @@
 package pl.kosiorski.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import pl.kosiorski.model.enums.Status;
@@ -12,6 +13,7 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
+@AllArgsConstructor
 @Table(name = "beers")
 public class Beer {
 
@@ -39,29 +41,19 @@ public class Beer {
   private Double ph;
   private Double attenuationLevel;
 
-  @OneToOne
-  @JoinColumn(name = "volume_id")
-  private Volume volume;
-//
-//  @OneToOne
-//  @JoinColumn(name = "boil_volume_id")
-//  private BoilVolume boilVolume;
+  @Embedded private Volume volume;
 
-//  @OneToOne
-//  @JoinColumn(name = "method_id")
-//  private Method method;
+  @Embedded private BoilVolume boilVolume;
+
+  //  @Embedded private Method method;
 
   private String brewersTips;
   private String contributedBy;
   private String yeast;
 
-//  @OneToMany(mappedBy = "beer")
-//  private List<Ingredient> ingredients;
+  //  private List<Ingredient> ingredients;
 
-//  @ElementCollection
-//  @CollectionTable(name = "foodPairings", joinColumns = @JoinColumn(name = "beer_id"))
-//  @Column(name = "foodPairing")
-//  private List<String> foodPairing;
+  //  private List<String> foodPairing;
 
   private double rating;
 
