@@ -38,7 +38,9 @@ public class Beer {
   private Double ph;
   private Double attenuationLevel;
 
-  @Embedded private Volume volume;
+  @OneToOne(cascade = CascadeType.ALL)
+  @JoinColumn(name = "volume_id")
+  private Volume volume;
 
   //  @Embedded private BoilVolume boilVolume;
 
