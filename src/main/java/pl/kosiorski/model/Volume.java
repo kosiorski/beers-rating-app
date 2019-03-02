@@ -12,7 +12,10 @@ import javax.persistence.*;
 @Embeddable
 public class Volume {
 
+  @Column(name = "volume_value")
   private Integer value;
+
+  @Column(name = "volume_unit")
   private String unit;
 
   public Volume() {}
