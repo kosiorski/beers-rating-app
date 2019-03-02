@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import pl.kosiorski.model.enums.Status;
+import pl.kosiorski.model.volume.Volume;
 
 import javax.persistence.*;
 
@@ -42,7 +43,6 @@ public class Beer {
   @JoinColumn(name = "volume_id")
   private Volume volume;
 
-  //  @Embedded private BoilVolume boilVolume;
 
   //  @Embedded private Method method;
 
@@ -62,6 +62,5 @@ public class Beer {
 
   private Status status;
 
-  public Beer() {
-  }
+  public Beer() {}
 }

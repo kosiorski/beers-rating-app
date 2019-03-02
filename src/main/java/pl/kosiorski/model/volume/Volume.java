@@ -1,8 +1,10 @@
-package pl.kosiorski.model;
+package pl.kosiorski.model.volume;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import pl.kosiorski.model.Beer;
+import pl.kosiorski.model.volume.BoilVolume;
 
 import javax.persistence.*;
 
@@ -17,14 +19,16 @@ public class Volume {
   @Column(name = "volume_id")
   private Long id;
 
-  @Column(name = "volume_value")
   private Integer value;
 
-  @Column(name = "volume_unit")
   private String unit;
 
   @OneToOne(mappedBy = "volume")
   private Beer beer;
+
+  @OneToOne(cascade = CascadeType.ALL)
+  @JoinColumn(name = "boilVolume_id")
+  private BoilVolume boilVolume;
 
   public Volume() {}
 }
