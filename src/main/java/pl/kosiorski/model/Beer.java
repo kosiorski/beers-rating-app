@@ -1,10 +1,10 @@
 package pl.kosiorski.model;
 
+import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import pl.kosiorski.model.enums.Status;
-import pl.kosiorski.model.volume.Volume;
 
 import javax.persistence.*;
 
@@ -30,10 +30,14 @@ public class Beer {
   private String description;
 
   private String imageUrl;
+
   private Double abv;
   private Double ibu;
+
+  // TODO how to map this?
   private Double targetFg;
   private Double targetOg;
+
   private Double ebc;
   private Double srm;
   private Double ph;
@@ -43,6 +47,9 @@ public class Beer {
   @JoinColumn(name = "volume_id")
   private Volume volume;
 
+  @OneToOne(cascade = CascadeType.ALL)
+  @JoinColumn(name = "boilVolume_id")
+  private BoilVolume boilVolume;
 
   //  @Embedded private Method method;
 

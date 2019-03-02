@@ -1,7 +1,9 @@
-package pl.kosiorski.model.method;
+package pl.kosiorski.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import pl.kosiorski.model.method.Fermentation;
+import pl.kosiorski.model.method.MashTemp;
 
 import java.util.List;
 

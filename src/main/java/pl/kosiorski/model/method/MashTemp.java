@@ -2,6 +2,7 @@ package pl.kosiorski.model.method;
 
 import lombok.Getter;
 import lombok.Setter;
+import pl.kosiorski.model.Method;
 
 
 @Getter

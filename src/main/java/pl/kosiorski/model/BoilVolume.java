@@ -1,4 +1,4 @@
-package pl.kosiorski.model.volume;
+package pl.kosiorski.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,7 +20,7 @@ public class BoilVolume {
   private String unit;
 
   @OneToOne(mappedBy = "boilVolume")
-  private Volume volume;
+  private Beer beer;
 
   public BoilVolume() {}
 }
