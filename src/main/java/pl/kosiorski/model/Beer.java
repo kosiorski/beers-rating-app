@@ -6,6 +6,7 @@ import lombok.Setter;
 import pl.kosiorski.model.enums.Status;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Getter
@@ -60,7 +61,10 @@ public class Beer {
 
   //  private List<Ingredient> ingredients;
 
-  //  private List<String> foodPairing;
+  @ElementCollection
+  @CollectionTable(name = "food_pairing", joinColumns = @JoinColumn(name = "beer_id"))
+  @Column(name = "meal")
+  private List<String> food_pairing;
 
   private double rating;
 
