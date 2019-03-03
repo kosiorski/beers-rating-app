@@ -1,6 +1,5 @@
 package pl.kosiorski.model;
 
-import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -24,24 +23,24 @@ public class Beer {
 
   private String tagline;
 
-  private String firstBrewed;
+  private String first_brewed;
 
   @Column(length = 2000)
   private String description;
 
-  private String imageUrl;
+  private String image_url;
 
   private Double abv;
   private Double ibu;
 
   // TODO how to map this?
-  private Double targetFg;
-  private Double targetOg;
+  private Double target_fg;
+  private Double target_og;
 
   private Double ebc;
   private Double srm;
   private Double ph;
-  private Double attenuationLevel;
+  private Double attenuation_level;
 
   @OneToOne(cascade = CascadeType.ALL)
   @JoinColumn(name = "volume_id")
@@ -49,12 +48,14 @@ public class Beer {
 
   @OneToOne(cascade = CascadeType.ALL)
   @JoinColumn(name = "boilVolume_id")
-  private BoilVolume boilVolume;
+  private BoilVolume boil_volume;
 
   //  @Embedded private Method method;
 
-  private String brewersTips;
-  private String contributedBy;
+  @Column(length = 2000)
+  private String brewers_tips;
+
+  private String contributed_by;
   private String yeast;
 
   //  private List<Ingredient> ingredients;

@@ -19,7 +19,7 @@ public class BoilVolume {
   private Integer value;
   private String unit;
 
-  @OneToOne(mappedBy = "boilVolume")
+  @OneToOne(mappedBy = "boil_volume")
   private Beer beer;
 
   public BoilVolume() {}
