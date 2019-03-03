@@ -24,7 +24,5 @@ public class Volume {
   @OneToOne(mappedBy = "volume")
   private Beer beer;
 
-
-
   public Volume() {}
 }

@@ -34,7 +34,6 @@ public class Beer {
   private Double abv;
   private Double ibu;
 
-  // TODO how to map this?
   private Double target_fg;
   private Double target_og;
 
@@ -51,7 +50,9 @@ public class Beer {
   @JoinColumn(name = "boilVolume_id")
   private BoilVolume boil_volume;
 
-  //  @Embedded private Method method;
+  @OneToOne(cascade = CascadeType.ALL)
+  @JoinColumn(name = "method_id")
+  private Method method;
 
   @Column(length = 2000)
   private String brewers_tips;
