@@ -15,7 +15,10 @@ import java.util.List;
 @AllArgsConstructor
 public class Method {
 
-  //  private List<MashTemp> mashTemp;
+
+  @OneToMany
+  @JoinColumn(name="mas")
+  private List<MashTemp> mash_temp;
 
   //  private Fermentation fermentation;
 
