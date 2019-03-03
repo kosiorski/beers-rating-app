@@ -1,9 +1,9 @@
-package pl.kosiorski.model;
+package pl.kosiorski.model.beer;
 
 import lombok.Getter;
 import lombok.Setter;
-import pl.kosiorski.model.method.Fermentation;
-import pl.kosiorski.model.method.MashTemp;
+import pl.kosiorski.model.beer.method.Fermentation;
+import pl.kosiorski.model.beer.method.MashTemp;
 
 import java.util.List;
 

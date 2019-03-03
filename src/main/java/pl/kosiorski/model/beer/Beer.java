@@ -1,9 +1,9 @@
-package pl.kosiorski.model;
+package pl.kosiorski.model.beer;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-import pl.kosiorski.model.enums.Status;
+import pl.kosiorski.model.beer.enums.Status;
 
 import javax.persistence.*;
 import java.util.List;

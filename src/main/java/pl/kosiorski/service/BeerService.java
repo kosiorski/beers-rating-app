@@ -1,6 +1,6 @@
 package pl.kosiorski.service;
 
-import pl.kosiorski.model.Beer;
+import pl.kosiorski.model.beer.Beer;
 
 import java.util.List;
 

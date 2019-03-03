@@ -1,8 +1,8 @@
-package pl.kosiorski.model.method;
+package pl.kosiorski.model.beer.method;
 
 import lombok.Getter;
 import lombok.Setter;
-import pl.kosiorski.model.Method;
+import pl.kosiorski.model.beer.Method;
 
 
 @Getter

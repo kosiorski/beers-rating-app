@@ -1,4 +1,4 @@
-package pl.kosiorski.model;
+package pl.kosiorski.model.beer;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
