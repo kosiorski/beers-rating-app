@@ -20,11 +20,13 @@ public class Method {
   @Column(name = "method_id")
   private Long id;
 
-  @OneToMany(cascade = CascadeType.ALL, mappedBy = "method")
-  //  @JoinTable(
-  //      name = "mash_temps",
-  //      joinColumns = @JoinColumn(name = "method_id"),
-  //      inverseJoinColumns = @JoinColumn(name = "mash_temp_id"))
+  //  @OneToMany(cascade = CascadeType.ALL, mappedBy = "method")
+
+  @OneToMany(cascade = CascadeType.ALL)
+  @JoinTable(
+      name = "method_mash_temp",
+      joinColumns = @JoinColumn(name = "method_id"),
+      inverseJoinColumns = @JoinColumn(name = "mash_temp_id"))
   private List<MashTemp> mash_temp;
 
   @OneToOne(cascade = CascadeType.ALL)

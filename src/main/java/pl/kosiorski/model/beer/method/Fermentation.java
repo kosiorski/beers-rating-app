@@ -19,7 +19,7 @@ public class Fermentation {
   private Long id;
 
   @OneToOne
-  @JoinTable(name = "temp_id")
+  @JoinColumn(name = "temp_id")
   private Temp temp;
 
   @OneToOne(mappedBy = "fermentation")
