@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import pl.kosiorski.model.Beer;
-import pl.kosiorski.model.enums.Flag;
-import pl.kosiorski.model.enums.Status;
+import pl.kosiorski.model.beer.Beer;
+import pl.kosiorski.model.beer.enums.Flag;
+import pl.kosiorski.model.beer.enums.Status;
 import pl.kosiorski.service.BeerService;
 
 @RestController

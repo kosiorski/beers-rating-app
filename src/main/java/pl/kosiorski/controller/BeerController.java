@@ -7,8 +7,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
-import pl.kosiorski.model.Beer;
-import pl.kosiorski.model.enums.Status;
+import pl.kosiorski.model.beer.Beer;
+import pl.kosiorski.model.beer.enums.Status;
 import pl.kosiorski.service.BeerService;
 
 import java.util.List;

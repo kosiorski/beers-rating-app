@@ -2,7 +2,7 @@ package pl.kosiorski.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pl.kosiorski.model.Beer;
+import pl.kosiorski.model.beer.Beer;
 import pl.kosiorski.repository.BeerRepository;
 import pl.kosiorski.service.BeerService;
 
@@ -25,7 +25,7 @@ public class BeerServiceImpl implements BeerService {
 
   @Override
   public Beer rateBeer(Long beerId, double value) {
-    // TODO oprional
+    // TODO optional
     Beer byId = beerRepository.findById(beerId).get();
     byId.setRating(value);
     return beerRepository.save(byId);

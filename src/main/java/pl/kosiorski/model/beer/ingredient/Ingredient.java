@@ -1,4 +1,4 @@
-package pl.kosiorski.model.ingredient;
+package pl.kosiorski.model.beer.ingredient;
 
 import lombok.Getter;
 import lombok.Setter;

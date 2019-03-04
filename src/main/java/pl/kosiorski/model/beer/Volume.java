@@ -1,4 +1,4 @@
-package pl.kosiorski.model;
+package pl.kosiorski.model.beer;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -6,17 +6,23 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+@Entity
 @Getter
 @Setter
 @AllArgsConstructor
-@Embeddable
 public class Volume {
 
-  @Column(name = "volume_value")
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "volume_id")
+  private Long id;
+
   private Integer value;
 
-  @Column(name = "volume_unit")
   private String unit;
+
+  @OneToOne(mappedBy = "volume")
+  private Beer beer;
 
   public Volume() {}
 }
