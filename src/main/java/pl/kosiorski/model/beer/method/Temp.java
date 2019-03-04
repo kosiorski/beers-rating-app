@@ -19,8 +19,13 @@ public class Temp {
   private double value;
   private String unit;
 
-//  @OneToOne(mappedBy = "temp")
-//  private MashTemp mash_temp;
+  @OneToOne(mappedBy = "temp")
+  private MashTemp mash_temp;
+
+  @OneToOne(cascade = CascadeType.ALL, mappedBy = "temp")
+  private Fermentation fermentation;
+
+
 
   public Temp() {}
 }

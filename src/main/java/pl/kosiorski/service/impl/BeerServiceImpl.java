@@ -25,7 +25,7 @@ public class BeerServiceImpl implements BeerService {
 
   @Override
   public Beer rateBeer(Long beerId, double value) {
-    // TODO oprional
+    // TODO optional
     Beer byId = beerRepository.findById(beerId).get();
     byId.setRating(value);
     return beerRepository.save(byId);
