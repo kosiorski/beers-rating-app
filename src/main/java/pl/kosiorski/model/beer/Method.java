@@ -20,8 +20,6 @@ public class Method {
   @Column(name = "method_id")
   private Long id;
 
-  //  @OneToMany(cascade = CascadeType.ALL, mappedBy = "method")
-
   @OneToMany(cascade = CascadeType.ALL)
   @JoinTable(
       name = "method_mash_temp",

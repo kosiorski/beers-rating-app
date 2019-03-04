@@ -24,9 +24,5 @@ public class MashTemp {
 
   private Integer duration;
 
-//  @ManyToOne
-//  @JoinColumn(name = "method_id")
-//  private Method method;
-
   public MashTemp() {}
 }

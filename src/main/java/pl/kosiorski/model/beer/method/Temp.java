@@ -22,10 +22,8 @@ public class Temp {
   @OneToOne(mappedBy = "temp")
   private MashTemp mash_temp;
 
-  @OneToOne(cascade = CascadeType.ALL, mappedBy = "temp")
+  @OneToOne(mappedBy = "temp")
   private Fermentation fermentation;
-
-
 
   public Temp() {}
 }

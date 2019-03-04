@@ -18,7 +18,7 @@ public class Fermentation {
   @Column(name = "fermentation_id")
   private Long id;
 
-  @OneToOne
+  @OneToOne(cascade = CascadeType.ALL)
   @JoinColumn(name = "temp_id")
   private Temp temp;
 
