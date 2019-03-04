@@ -15,16 +15,19 @@ import java.util.List;
 @AllArgsConstructor
 public class Method {
 
-
-  @OneToMany(mappedBy = "method")
-  private List<MashTemp> mash_temp;
-
-  //  private Fermentation fermentation;
-
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "method_id")
   private Long id;
+
+  @OneToMany(cascade = CascadeType.ALL)
+  @JoinTable(
+      name = "mash_temps",
+      joinColumns = @JoinColumn(name = "method_id"),
+      inverseJoinColumns = @JoinColumn(name = "mash_temp_id"))
+  private List<MashTemp> mash_temp;
+
+  //  private Fermentation fermentation;
 
   private String twist;
 

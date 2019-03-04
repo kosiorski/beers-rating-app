@@ -19,8 +19,8 @@ public class Temp {
   private double value;
   private String unit;
 
-  @OneToOne(mappedBy = "temp")
-  private MashTemp mash_temp;
+//  @OneToOne(mappedBy = "temp")
+//  private MashTemp mash_temp;
 
   public Temp() {}
 }

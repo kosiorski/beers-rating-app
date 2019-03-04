@@ -18,9 +18,9 @@ public class MashTemp {
   @Column(name = "mash_temp_id")
   private Long id;
 
-  @OneToOne
-  @JoinColumn(name = "temp_id")
-  private Temp temp;
+//  @OneToOne
+//  @JoinColumn(name = "temp_id")
+//  private Temp temp;
 
   private Integer duration;
 
