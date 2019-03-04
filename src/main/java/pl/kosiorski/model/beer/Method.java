@@ -16,14 +16,14 @@ import java.util.List;
 public class Method {
 
 
-  @OneToMany
-  @JoinColumn(name="mas")
+  @OneToMany(mappedBy = "method")
   private List<MashTemp> mash_temp;
 
   //  private Fermentation fermentation;
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "method_id")
   private Long id;
 
   private String twist;

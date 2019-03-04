@@ -4,10 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Getter
@@ -21,6 +18,9 @@ public class Temp {
 
   private double value;
   private String unit;
+
+  @OneToOne(mappedBy = "temp")
+  private MashTemp mash_temp;
 
   public Temp() {}
 }
